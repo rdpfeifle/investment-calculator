@@ -24,28 +24,28 @@ export function UserInput({ userInput, onChange }) {
             required
           />
         </p>
-        <div className="input-group">
-          <p>
-            <label>Expected Return</label>
-            <input
-              type="number"
-              value={expectedReturn}
-              onChange={onChange}
-              name="expectedReturn"
-              required
-            />
-          </p>
-          <p>
-            <label>Duration</label>
-            <input
-              type="number"
-              value={duration}
-              onChange={onChange}
-              name="duration"
-              required
-            />
-          </p>
-        </div>
+      </div>
+      <div className="input-group">
+        <p>
+          <label>Expected Return</label>
+          <input
+            type="number"
+            value={expectedReturn}
+            onChange={onChange}
+            name="expectedReturn"
+            required
+          />
+        </p>
+        <p>
+          <label>Duration</label>
+          <input
+            type="number"
+            value={duration}
+            onChange={onChange}
+            name="duration"
+            required
+          />
+        </p>
       </div>
     </section>
   );
