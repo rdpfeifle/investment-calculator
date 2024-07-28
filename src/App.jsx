@@ -13,6 +13,8 @@ const initialValues = {
 function App() {
   const [userInput, setUserInput] = useState(initialValues);
 
+  const isInputValid = userInput.duration >= 1;
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -26,7 +28,11 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChange={handleInputChange} />
-      <ResultsTable userInput={userInput} />
+      {isInputValid ? (
+        <ResultsTable userInput={userInput} />
+      ) : (
+        <p className="center">Please enter a duration greater than zero.</p>
+      )}
     </>
   );
 }
